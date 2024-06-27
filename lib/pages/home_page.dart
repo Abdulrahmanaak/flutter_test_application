@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_test_application/components/post_page.dart';
 import 'package:flutter_test_application/components/toolbar.dart';
 
@@ -14,6 +15,12 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: Toolbar(
         title: '5minurteflutter',
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: SvgPicture.asset('assets/svg/location icon.svg'),
+          ),
+        ],
       ),
       body: ListView.separated(
         itemBuilder: (context, index) {

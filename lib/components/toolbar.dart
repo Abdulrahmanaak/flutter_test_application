@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test_application/styles/app_colors.dart';
+import 'package:flutter_test_application/styles/app_text.dart';
 
 class Toolbar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
@@ -12,7 +13,7 @@ class Toolbar extends StatelessWidget implements PreferredSizeWidget {
       backgroundColor: AppColors.background,
       title: Text(
         title,
-        // style: TextStyle(color: AppColors.white),
+        style: AppText.header1,
       ),
       centerTitle: false,
       actions: actions,
@@ -20,5 +21,5 @@ class Toolbar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => const Size.fromHeight(64);
+  Size get preferredSize => const Size.fromHeight(60);
 }
