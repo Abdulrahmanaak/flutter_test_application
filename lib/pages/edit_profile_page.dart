@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test_application/components/app_text_field.dart';
 import 'package:flutter_test_application/components/toolbar.dart';
-import 'package:flutter_test_application/components/user_Avatar.dart';
+import 'package:flutter_test_application/components/user_avatar.dart';
 import 'package:flutter_test_application/config/app_strings.dart';
 import 'package:flutter_test_application/styles/app_colors.dart';
 import 'package:flutter_test_application/styles/app_text.dart';
