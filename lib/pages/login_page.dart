@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_test_application/config/app_icons.dart';
+import 'package:flutter_test_application/config/app_routes.dart';
+import 'package:flutter_test_application/config/app_strings.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -15,7 +18,7 @@ class LoginPage extends StatelessWidget {
               children: [
                 Spacer(),
                 Text(
-                  'Hello, welcom back!',
+                  AppStrings.helloWelcome,
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 22,
@@ -26,7 +29,7 @@ class LoginPage extends StatelessWidget {
                   height: 16,
                 ),
                 Text(
-                  'Login to continue',
+                  AppStrings.loginToContinue,
                   style: TextStyle(
                     color: Colors.white,
                   ),
@@ -34,7 +37,7 @@ class LoginPage extends StatelessWidget {
                 Spacer(),
                 TextField(
                   decoration: InputDecoration(
-                    hintText: 'Username',
+                    hintText: AppStrings.username,
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.all(
                         Radius.circular(12),
@@ -49,7 +52,7 @@ class LoginPage extends StatelessWidget {
                 ),
                 TextField(
                   decoration: InputDecoration(
-                    hintText: 'Password',
+                    hintText: AppStrings.password,
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.all(
                         Radius.circular(12),
@@ -68,7 +71,7 @@ class LoginPage extends StatelessWidget {
                     style: TextButton.styleFrom(
                       foregroundColor: Colors.white,
                     ),
-                    child: Text('Forgot password?'),
+                    child: Text(AppStrings.forgotPassword),
                   ),
                 ),
                 SizedBox(
@@ -79,18 +82,19 @@ class LoginPage extends StatelessWidget {
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () {
-                      Navigator.of(context).pushReplacementNamed('/main');
+                      Navigator.of(context)
+                          .pushReplacementNamed(AppRoutes.main);
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.amber,
                       foregroundColor: Colors.black,
                     ),
-                    child: Text('Log in'),
+                    child: Text(AppStrings.login),
                   ),
                 ),
                 Spacer(),
                 Text(
-                  'Or sign in with',
+                  AppStrings.orSignInWith,
                   style: TextStyle(
                     color: Colors.white,
                   ),
@@ -117,14 +121,14 @@ class LoginPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Image.asset(
-                          'assets/images/google.png',
+                          AppIcons.icGoogle,
                           width: 22,
                           height: 22,
                         ),
                         SizedBox(
                           width: 8,
                         ),
-                        Text('Login with google'),
+                        Text(AppStrings.loginWithGoogle),
                       ],
                     ),
                   ),
@@ -151,14 +155,14 @@ class LoginPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Image.asset(
-                          'assets/images/facebook.png',
+                          AppIcons.icFacebook,
                           width: 22,
                           height: 22,
                         ),
                         SizedBox(
                           width: 8,
                         ),
-                        Text('Login with facebook'),
+                        Text(AppStrings.loginWithFacebook),
                       ],
                     ),
                   ),
@@ -166,7 +170,7 @@ class LoginPage extends StatelessWidget {
                 Row(
                   children: [
                     Text(
-                      "don't have account?",
+                      AppStrings.dontHaveAccount,
                       style: TextStyle(
                         color: Colors.white,
                       ),
@@ -177,7 +181,7 @@ class LoginPage extends StatelessWidget {
                         foregroundColor: Colors.amber,
                       ),
                       child: Text(
-                        'Sign up',
+                        AppStrings.signup,
                         style: TextStyle(
                           decoration: TextDecoration.underline,
                           decorationColor: Colors.amber,

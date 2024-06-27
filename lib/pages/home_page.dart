@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_test_application/components/post_page.dart';
 import 'package:flutter_test_application/components/toolbar.dart';
+import 'package:flutter_test_application/config/app_icons.dart';
+import 'package:flutter_test_application/config/app_strings.dart';
 
 // ignore: must_be_immutable
 class HomePage extends StatelessWidget {
@@ -14,11 +16,11 @@ class HomePage extends StatelessWidget {
     mockUsersFromServer();
     return Scaffold(
       appBar: Toolbar(
-        title: '5minurteflutter',
+        title: AppStrings.appName,
         actions: [
           IconButton(
             onPressed: () {},
-            icon: SvgPicture.asset('assets/svg/location icon.svg'),
+            icon: SvgPicture.asset(AppIcons.icLocation),
           ),
         ],
       ),

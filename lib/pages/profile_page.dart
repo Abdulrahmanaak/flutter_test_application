@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test_application/components/toolbar.dart';
+import 'package:flutter_test_application/config/app_routes.dart';
+import 'package:flutter_test_application/config/app_strings.dart';
 import 'package:flutter_test_application/styles/app_text.dart';
 
 enum ProfileMenu { edit, logout }
@@ -11,14 +13,14 @@ class ProfilePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: Toolbar(
-        title: 'Profile',
+        title: AppStrings.profile,
         actions: [
           PopupMenuButton<ProfileMenu>(
             onSelected: (value) {
               switch (value) {
                 case ProfileMenu.edit:
-                  print('edit');
-
+                  Navigator.of(context).pushNamed(AppRoutes.editProfile);
+                  break;
                 case ProfileMenu.logout:
                   print('log out');
                   break;
@@ -28,11 +30,11 @@ class ProfilePage extends StatelessWidget {
             itemBuilder: (context) {
               return [
                 PopupMenuItem(
-                  child: Text('Edit'),
+                  child: Text(AppStrings.edit),
                   value: ProfileMenu.edit,
                 ),
                 PopupMenuItem(
-                  child: Text('Log out'),
+                  child: Text(AppStrings.logout),
                   value: ProfileMenu.logout,
                 ),
               ];
@@ -76,7 +78,7 @@ class ProfilePage extends StatelessWidget {
                     '472',
                     style: AppText.header2,
                   ),
-                  Text('followers'),
+                  Text(AppStrings.followers),
                 ],
               ),
               Column(
@@ -85,7 +87,7 @@ class ProfilePage extends StatelessWidget {
                     '119',
                     style: AppText.header2,
                   ),
-                  Text('posts'),
+                  Text(AppStrings.posts),
                 ],
               ),
               Column(
@@ -94,7 +96,7 @@ class ProfilePage extends StatelessWidget {
                     '860',
                     style: AppText.header2,
                   ),
-                  Text('following'),
+                  Text(AppStrings.following),
                 ],
               )
             ],
