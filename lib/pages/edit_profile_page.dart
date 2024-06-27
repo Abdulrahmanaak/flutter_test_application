@@ -4,6 +4,7 @@ import 'package:flutter_test_application/components/toolbar.dart';
 import 'package:flutter_test_application/components/user_Avatar.dart';
 import 'package:flutter_test_application/config/app_strings.dart';
 import 'package:flutter_test_application/styles/app_colors.dart';
+import 'package:flutter_test_application/styles/app_text.dart';
 
 enum Gender {
   none,
@@ -76,14 +77,23 @@ class _EditProfilePageState extends State<EditProfilePage> {
                 height: 16,
               ),
               AppTextField(hint: AppStrings.birthday),
+              SizedBox(
+                height: 16,
+              ),
               Container(
+                padding: const EdgeInsets.only(left: 12, right: 12, top: 6),
                 decoration: BoxDecoration(
                     color: AppColors.fieldColor,
                     borderRadius: BorderRadius.all(Radius.circular(12))),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(AppStrings.gender),
+                    Text(
+                      AppStrings.gender,
+                      style: AppText.body1.copyWith(
+                        fontSize: 12,
+                      ),
+                    ),
                     Row(
                       children: [
                         Expanded(
