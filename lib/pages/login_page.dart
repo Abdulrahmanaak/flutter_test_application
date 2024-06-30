@@ -2,12 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test_application/config/app_icons.dart';
 import 'package:flutter_test_application/config/app_routes.dart';
 import 'package:flutter_test_application/config/app_strings.dart';
+// import 'package:http/http.dart' as http; //Request to Network! : Login User
+
+// const baseUrl = 'http://localhost:8080'; //Request to Network! : Login User
 
 class LoginPage extends StatelessWidget {
+  // final loginRoute = '$baseUrl/login';
   const LoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    // doLogin(); //Request to Network! : Login User
     return Scaffold(
       body: SingleChildScrollView(
         child: SizedBox(
@@ -198,4 +203,16 @@ class LoginPage extends StatelessWidget {
       ),
     );
   }
+
+  // //Request to Network! : Login User
+  // Future<String> doLogin() async {
+  //   final response = await http.post(Uri.parse(loginRoute));
+  //   if (response.statusCode == 200) {
+  //     print(response.body);
+  //     return response.body;
+  //   } else {
+  //     print('You have error!');
+  //     throw Exception('Error');
+  //   }
+  // }
 }
