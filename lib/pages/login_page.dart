@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test_application/config/app_icons.dart';
 import 'package:flutter_test_application/config/app_routes.dart';
 import 'package:flutter_test_application/config/app_strings.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 // import 'package:http/http.dart' as http; //Request to Network! : Login User
 
 // const baseUrl = 'http://localhost:8080'; //Request to Network! : Login User
@@ -23,7 +24,7 @@ class LoginPage extends StatelessWidget {
               children: [
                 Spacer(),
                 Text(
-                  AppStrings.helloWelcome,
+                  AppLocalizations.of(context)!.helloWelcome,
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 22,
@@ -34,7 +35,7 @@ class LoginPage extends StatelessWidget {
                   height: 16,
                 ),
                 Text(
-                  AppStrings.loginToContinue,
+                  AppLocalizations.of(context)!.loginToContinue,
                   style: TextStyle(
                     color: Colors.white,
                   ),

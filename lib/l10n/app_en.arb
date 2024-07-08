@@ -1,0 +1,14 @@
+{
+    "language": "English",
+    "@language":{
+        "description": "The current Language"
+    },
+    "helloWelcome": "Hello, welcome back!",
+    "@helloWelcome":{
+        "description": "helloWelcome"
+    },
+    "loginToContinue": "Login to continue",
+    "@loginToContinue":{
+        "description": "loginToContinue"
+    }
+}
