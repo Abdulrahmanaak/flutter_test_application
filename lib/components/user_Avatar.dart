@@ -9,7 +9,7 @@ class UserAvatar extends StatelessWidget {
     return ClipRRect(
       borderRadius: BorderRadius.all(Radius.circular(16)),
       child: Image.asset(
-        'assets/temp/Photo.JPG',
+        'assets/temp/avatar.jpg',
         width: size,
         height: size,
       ),
